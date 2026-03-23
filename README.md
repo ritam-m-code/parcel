@@ -62,3 +62,7 @@ http://YOUR_LOCAL_IP:5173/team-room
 ```
 
 Example: `http://192.168.1.20:5173/team-room`
+
+Notes:
+- Keep both `client` and `server` running via `npm run dev`.
+- Collaboration websocket traffic is proxied through port `5173`, so your friend only needs the shared frontend URL.

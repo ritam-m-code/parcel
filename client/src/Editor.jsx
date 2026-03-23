@@ -21,7 +21,7 @@ function getWebsocketUrl() {
   }
 
   const wsProtocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
-  return `${wsProtocol}://${window.location.hostname}:1234`;
+  return `${wsProtocol}://${window.location.host}/yjs`;
 }
 
 function Editor() {
