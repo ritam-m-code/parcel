@@ -39,3 +39,26 @@ Each URL path is a separate room:
 - `http://localhost:5173/team-a` -> `team-a`
 
 Open the same path in multiple tabs to collaborate in one session.
+
+## Collaborate With A Friend (LAN)
+
+1. Ensure both of you are on the same network.
+2. Start both servers on your machine:
+
+```bash
+npm run dev
+```
+
+3. Find your local IPv4 address:
+
+```powershell
+ipconfig
+```
+
+4. Share this URL with your friend (same room path):
+
+```text
+http://YOUR_LOCAL_IP:5173/team-room
+```
+
+Example: `http://192.168.1.20:5173/team-room`

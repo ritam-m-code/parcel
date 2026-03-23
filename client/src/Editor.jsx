@@ -16,7 +16,12 @@ function getRoomName() {
 }
 
 function getWebsocketUrl() {
-  return import.meta.env.VITE_WS_URL || 'ws://localhost:1234';
+  if (import.meta.env.VITE_WS_URL) {
+    return import.meta.env.VITE_WS_URL;
+  }
+
+  const wsProtocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+  return `${wsProtocol}://${window.location.hostname}:1234`;
 }
 
 function Editor() {
